@@ -1,0 +1,38 @@
+<div align="center">
+  <h2>Lista de Usuários</h2>
+
+  <table border="1">
+    <tr>
+      <th>nome</th>
+      <th>Data/hora de registro</th>
+      <th>endereço</th>
+      <th>status</th>
+      <th>Ação 1</th>
+      <th>Ação 2</th>
+    </tr>
+    <tr *ngFor="let usuarios of usuarios">
+      <td>
+        {{usuarios.nome}}
+      </td>
+      <td>
+        {{usuarios.data}}
+      </td>
+      <td>
+        {{usuarios.endereco}}
+      </td>
+      <td>
+        {{usuarios.status}}
+      </td>
+      <td>
+        <button align="center" (click) = "removeUsuario(usuarios._id)">Remover</button>
+      </td>
+      <td>
+          <button align="center" (click) = "atualizaUsuario(usuarios._id)">Atualiza</button>
+        </td>
+    </tr>
+  </table>
+
+  <h3>
+      <a [routerLink]="['/usuario/novo']"> Adiciona </a>
+    </h3>
+</div>

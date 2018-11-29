@@ -1,0 +1,14 @@
+<div align="center" *ngFor="let usuarios of usuarios">
+    <form (ngSubmit)="atualiza_usuario(usuarios._id)">
+      <p>
+        Nome: <input type="text" name="nome" [(ngModel)]="usuarios.nome">
+      </p>
+      <p>
+        modelo de robô usado: <input type="text" name="modeloRobo" [(ngModel)]="usuarios.robo">
+      </p>
+      <p>
+        Endereço: <input type="text" name="endereco" [(ngModel)]="usuarios.endereco">
+      </p>
+      <button type="submit">Atualizar</button>
+    </form>
+  </div>

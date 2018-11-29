@@ -1,0 +1,15 @@
+<div align="center">
+  <form (ngSubmit)="criaUsuario()">
+    <p>
+      Nome: <input type="text" name="nome" [(ngModel)]="usuario.nome">
+    </p>
+    <p>
+      modelo de robô usado: <input type="text" name="modeloRobo"  [(ngModel)]="usuario.robo">
+    </p>
+    <p>
+      Endereço: <input type="text" name="endereco"  [(ngModel)]="usuario.endereco">
+    </p>
+
+    <button type="submit">Inserir</button>
+  </form>
+</div>

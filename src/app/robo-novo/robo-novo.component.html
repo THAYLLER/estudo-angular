@@ -1,0 +1,11 @@
+<div align="center">
+  <form (ngSubmit)="criaRobo()">
+    <p>
+      tipo: <input type="text" name="tipo" [(ngModel)]="robo.tipo">
+    </p>
+    <p>
+      url_imagem: <input type="text" name="url_imagem" [(ngModel)]="robo.url_imagem">
+    </p>
+    <button type="submit">Inserir</button>
+  </form>
+</div>

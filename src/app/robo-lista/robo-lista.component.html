@@ -1,0 +1,34 @@
+<div align="center">
+  <h2>Lista de robos</h2>
+
+  <table border="1">
+    <tr>
+      <th>tipo</th>
+      <th>Data/hora de registro</th>
+      <th>status</th>
+      <th>Ação 1</th>
+      <th>Ação 2</th>
+    </tr>
+    <tr *ngFor="let robos of robos">
+      <td>
+        {{robos.tipo}}
+      </td>
+      <td>
+        {{robos.data}}
+      </td>
+      <td>
+        {{robos.status}}
+      </td>
+      <td>
+        <button align="center" (click) = "removeRobo(robos._id)">Remover</button>
+      </td>
+      <td>
+          <button align="center" (click) = "atualizaRobo(robos._id)">Atualiza</button>
+        </td>
+    </tr>
+  </table>
+
+  <h3>
+      <a [routerLink]="['/robo/novo']"> Adiciona </a>
+    </h3>
+</div>

@@ -1,0 +1,11 @@
+<div align="center" *ngFor="let robos of robo">
+  <form (ngSubmit)="atualizaRobo(robos._id)">
+    <p>
+      tipo: <input type="text" name="tipo" [(ngModel)]="robos.tipo">
+    </p>
+    <p>
+      url_imagem: <input type="text" name="url_imagem" [(ngModel)]="robos.url_imagem">
+    </p>
+    <button type="submit">Atualizar</button>
+  </form>
+</div>
